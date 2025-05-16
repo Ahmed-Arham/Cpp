@@ -1,0 +1,169 @@
+Class to Calculate the Average of 3 Numbers
+
+#include <iostream>
+using namespace std;
+
+class Average {
+public:
+    float a, b, c;
+
+    void input() {
+        cout << "Enter three numbers: ";
+        cin >> a >> b >> c;
+    }
+
+    void findAverage() {
+        float avg = (a + b + c) / 3;
+        cout << "Average: " << avg << endl;
+    }
+};
+
+int main() {
+    Average avg;
+    avg.input();
+    avg.findAverage();
+    return 0;
+}
+
+
+
+Simple Calculator
+
+
+#include <iostream>
+using namespace std;
+
+class Calculator {
+public:
+    float a, b;
+
+    void input() {
+        cout << "Enter two numbers: ";
+        cin >> a >> b;
+    }
+
+    void add() { cout << "Addition: " << a + b << endl; }
+    void subtract() { cout << "Subtraction: " << a - b << endl; }
+    void multiply() { cout << "Multiplication: " << a * b << endl; }
+    void divide() {
+        if (b != 0)
+            cout << "Division: " << a / b << endl;
+        else
+            cout << "Cannot divide by zero!" << endl;
+    }
+};
+
+int main() {
+    Calculator c;
+    c.input();
+    c.add();
+    c.subtract();
+    c.multiply();
+    c.divide();
+    return 0;
+}
+
+swapping of teo numbers 
+
+#include <iostream>
+using namespace std;
+
+class Swapper {
+public:
+    int a, b;
+
+    void input() {
+        cout << "Enter two numbers: ";
+        cin >> a >> b;
+    }
+
+    void swapUsingArithmetic() {
+        a = a + b;
+        b = a - b;
+        a = a - b;
+    }
+
+    void display() {
+        cout << "a = " << a << ", b = " << b << endl;
+    }
+};
+
+int main() {
+    Swapper s;
+    s.input();
+
+    cout << "\nBefore Swap: ";
+    s.display();
+
+    s.swapUsingArithmetic();
+
+    cout << "After Swap: ";
+    s.display();
+
+    return 0;
+}
+
+
+check even or odd
+
+#include <iostream>
+using namespace std;
+
+class Number {
+public:
+    int num;
+
+    void input() {
+        cout << "Enter a number: ";
+        cin >> num;
+    }
+
+    void checkEvenOdd() {
+        if (num % 2 == 0)
+            cout << num << " is Even" << endl;
+        else
+            cout << num << " is Odd" << endl;
+    }
+};
+
+int main() {
+    Number n;
+    n.input();
+    n.checkEvenOdd();
+    return 0;
+}
+
+srudent info with user input
+
+#include <iostream>
+using namespace std;
+
+class Student {
+public:
+    string name;
+    int roll;
+    float marks;
+
+    void input() {
+        cout << "Enter name: ";
+        cin >> name;
+        cout << "Enter roll number: ";
+        cin >> roll;
+        cout << "Enter marks: ";
+        cin >> marks;
+    }
+
+    void display() {
+        cout << "\n--- Student Info ---" << endl;
+        cout << "Name: " << name << endl;
+        cout << "Roll: " << roll << endl;
+        cout << "Marks: " << marks << endl;
+    }
+};
+
+int main() {
+    Student s;
+    s.input();
+    s.display();
+    return 0;
+}
